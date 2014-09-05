@@ -16,7 +16,7 @@ png(filename = "plot2.png", width = 480, height = 480)
 
 # Plot lineplot
 plot(power_consumption$Global_active_power, type = "l", xaxt="n", xlab="", ylab = "Global Active Power (kilowatts)")
-axis(1, at = c(1,1440,2880), labels = c("Thu", "Fri", "Sat"))
+axis(1, at = c(1,nrow(power_consumption)/2, nrow(power_consumption)), labels = c("Thu", "Fri", "Sat"))
 
 # Close graphics device
 dev.off()
