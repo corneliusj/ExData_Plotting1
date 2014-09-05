@@ -18,7 +18,7 @@ png(filename = "plot3.png", width = 480, height = 480)
 plot(power_consumption$Sub_metering_1, type="l", xaxt = "n", xlab="", ylab="Energy sub metering")
 lines(power_consumption$Sub_metering_2, type="l", col="Red")
 lines(power_consumption$Sub_metering_3, type="l", col="Blue")
-axis(1, at = c(1,1440,2880), labels = c("Thu", "Fri", "Sat"))
+axis(1, at = c(1,nrow(power_consumption)/2,nrow(power_consumption)), labels = c("Thu", "Fri", "Sat"))
 legend("topright", legend = c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"), lty=c(1,1), col=c("black", "red", "blue"))
 
 # Close graphics device
